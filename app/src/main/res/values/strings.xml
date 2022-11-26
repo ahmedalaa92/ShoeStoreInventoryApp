@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Shoe Store Inventory App</string>
+    <string name="login_screen">Login</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Enter email here..</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter password here..</string>
+    <string name="sign_up">Sign up</string>
+    <string name="login_with_existing_account">Login with existing</string>
+</resources>
