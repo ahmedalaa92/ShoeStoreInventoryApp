@@ -15,8 +15,8 @@
             app:destination="@id/welcomeFragment"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_right"
-            app:popUpTo="@id/welcomeFragment"
-            app:popEnterAnim="@anim/slide_in_right" />
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popUpTo="@id/welcomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
@@ -28,5 +28,15 @@
             android:name="email"
             android:defaultValue=""
             app:argType="string" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
     </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.example.shoestoreinventoryapp.screens.instructions.InstructionsFragment"
+        android:label="InstructionsFragment"
+        tools:layout="@layout/fragment_instructions" />
 </navigation>

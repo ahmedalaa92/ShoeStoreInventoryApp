@@ -22,6 +22,10 @@ class LoginViewModel : ViewModel() {
         _navigateToWelcomeScreen.value = true
     }
 
+    fun onNavigationDone() {
+        _navigateToWelcomeScreen.value = false
+    }
+
     override fun onCleared() {
         super.onCleared()
         _navigateToWelcomeScreen.value = false

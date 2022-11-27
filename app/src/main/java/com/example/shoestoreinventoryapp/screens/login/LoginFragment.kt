@@ -25,10 +25,15 @@ class LoginFragment : Fragment() {
 
         loginViewModel.navigateToWelcomeScreen.observe(viewLifecycleOwner) { shouldNavigate ->
             if (shouldNavigate) {
-                val action = LoginFragmentDirections.actionLoginFragmentToWelcomeFragment("")
-                findNavController().navigate(action)
+                navigateToWelcomeFragment()
+                loginViewModel.onNavigationDone()
             }
         }
         return binding.root
+    }
+
+    private fun navigateToWelcomeFragment() {
+        val action = LoginFragmentDirections.actionLoginFragmentToWelcomeFragment("")
+        findNavController().navigate(action)
     }
 }
