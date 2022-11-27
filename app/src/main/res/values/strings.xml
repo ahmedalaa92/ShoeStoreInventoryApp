@@ -8,5 +8,6 @@
     <string name="sign_up">Sign up</string>
     <string name="login_with_existing_account">Login with existing</string>
     <string name="welcome_message">Welcome to Shoe Store App</string>
+    <string name="welcome_description">make tomorrow beautiful</string>
     <string name="next">Next</string>
 </resources>

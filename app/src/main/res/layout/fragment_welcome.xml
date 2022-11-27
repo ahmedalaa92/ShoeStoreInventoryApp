@@ -17,14 +17,28 @@
             android:id="@+id/welcomeMessageText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/label_margin"
+            android:layout_marginStart="@dimen/label_margin"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginEnd="@dimen/label_margin"
             android:gravity="center_horizontal"
             android:text="@string/welcome_message"
             android:textSize="@dimen/welcome_message_text_size"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/label_margin"
+            android:text="@string/welcome_description"
+            android:textAllCaps="true"
+            android:textSize="@dimen/welcome_description_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcomeMessageText" />
 
         <Button
             android:id="@+id/nextButton"
@@ -32,10 +46,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/big_margin"
             android:onClick="@{() -> welcomeViewModel.onNextButtonClicked()}"
+            android:paddingStart="@dimen/button_padding"
+            android:paddingEnd="@dimen/button_padding"
             android:text="@string/next"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/welcomeMessageText" />
+            app:layout_constraintTop_toBottomOf="@id/descriptionText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
