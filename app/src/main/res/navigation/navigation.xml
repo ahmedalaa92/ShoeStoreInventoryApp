@@ -61,9 +61,11 @@
         android:id="@+id/addShoeFragment"
         android:name="com.example.shoestoreinventoryapp.screens.addshoe.AddShoeFragment"
         android:label="AddShoeFragment"
-        tools:layout="@layout/fragment_add_shoe" >
+        tools:layout="@layout/fragment_add_shoe">
         <action
             android:id="@+id/action_addShoeFragment_to_shoeListFragment"
-            app:destination="@id/shoeListFragment" />
+            app:destination="@id/shoeListFragment"
+            app:popUpTo="@+id/shoeListFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
