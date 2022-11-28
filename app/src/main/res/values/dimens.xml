@@ -7,4 +7,5 @@
     <dimen name="screen_title_text_size">24sp</dimen>
     <dimen name="welcome_message_text_size">28sp</dimen>
     <dimen name="welcome_description_text_size">48sp</dimen>
+    <dimen name="instructions_description_text_size">16sp</dimen>
 </resources>

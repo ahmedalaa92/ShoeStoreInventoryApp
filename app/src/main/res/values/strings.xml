@@ -10,4 +10,7 @@
     <string name="welcome_message">Welcome to Shoe Store App</string>
     <string name="welcome_description">make tomorrow beautiful</string>
     <string name="next">Next</string>
+    <string name="instructions_title">Shoe Shop Instructions</string>
+    <string name="instructions_description">We will handle everything for you. As you have the app in your pocket then you don\'t have to worry about anything.\n\nWe have a huge collection of shoes so make sure you will find what you want.</string>
+    <string name="get_started">Get Started!</string>
 </resources>
