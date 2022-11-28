@@ -1,49 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/shoeImage"
-        android:layout_width="@dimen/shoe_image_dimension"
-        android:layout_height="@dimen/shoe_image_dimension"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_margin="@dimen/label_margin"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@color/light_grey">
 
-    <TextView
-        android:id="@+id/shoeNameText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/label_margin"
-        android:layout_marginEnd="@dimen/label_margin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@id/shoeImage"
-        app:layout_constraintTop_toTopOf="@id/shoeImage" />
+        <ImageView
+            android:id="@+id/shoeImage"
+            android:layout_width="@dimen/shoe_image_dimension"
+            android:layout_height="@dimen/shoe_image_dimension"
+            android:layout_margin="@dimen/label_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/shoeSizeText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/label_margin"
-        android:layout_marginEnd="@dimen/label_margin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@id/shoeImage"
-        app:layout_constraintTop_toBottomOf="@id/shoeNameText" />
+        <TextView
+            android:id="@+id/shoeNameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/label_margin"
+            android:layout_marginEnd="@dimen/label_margin"
+            app:layout_constraintBottom_toTopOf="@+id/shoeSizeText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/shoeImage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
 
-    <TextView
-        android:id="@+id/shoeCompanyText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/label_margin"
-        android:layout_marginEnd="@dimen/label_margin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@id/shoeImage"
-        app:layout_constraintTop_toBottomOf="@id/shoeSizeText" />
+        <TextView
+            android:id="@+id/shoeSizeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/label_margin"
+            android:layout_marginEnd="@dimen/label_margin"
+            app:layout_constraintBottom_toTopOf="@+id/shoeCompanyText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/shoeImage"
+            app:layout_constraintTop_toBottomOf="@+id/shoeNameText" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/shoeCompanyText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/label_margin"
+            android:layout_marginEnd="@dimen/label_margin"
+            app:layout_constraintBottom_toTopOf="@+id/shoeDescriptionText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/shoeImage"
+            app:layout_constraintTop_toBottomOf="@+id/shoeSizeText" />
+
+        <TextView
+            android:id="@+id/shoeDescriptionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/label_margin"
+            android:layout_marginEnd="@dimen/label_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/shoeImage"
+            app:layout_constraintTop_toBottomOf="@+id/shoeCompanyText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

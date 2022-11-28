@@ -67,6 +67,7 @@ class ShoeListFragment : Fragment() {
             layoutContainer.shoeNameText.text = shoe.name
             layoutContainer.shoeSizeText.text = shoe.size.toString()
             layoutContainer.shoeCompanyText.text = String.format("Company: ${shoe.company}")
+            layoutContainer.shoeDescriptionText.text = shoe.description
             binding.shoeListContainerLayout.addView(layoutContainer)
         }
     }

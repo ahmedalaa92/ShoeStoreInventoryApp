@@ -58,9 +58,14 @@ open class ShoeListViewModel : ViewModel() {
         _navigationToShoeList.value = true
     }
 
+    fun onCancelButtonClicked() {
+        _navigationToShoeList.value = true
+    }
+
     fun onNavigationToAddItemDone() {
         _navigationToAddItem.value = false
     }
+
     fun onNavigationToShoeListDone() {
         _navigationToShoeList.value = false
     }
