@@ -47,5 +47,23 @@
         android:id="@+id/shoeListFragment"
         android:name="com.example.shoestoreinventoryapp.screens.shoelist.ShoeListFragment"
         android:label="ShoeListFragment"
-        tools:layout="@layout/fragment_shoe_list" />
+        tools:layout="@layout/fragment_shoe_list">
+        <action
+            android:id="@+id/action_shoeListFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@+id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_shoeListFragment_to_addShoeFragment"
+            app:destination="@id/addShoeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addShoeFragment"
+        android:name="com.example.shoestoreinventoryapp.screens.addshoe.AddShoeFragment"
+        android:label="AddShoeFragment"
+        tools:layout="@layout/fragment_add_shoe" >
+        <action
+            android:id="@+id/action_addShoeFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment" />
+    </fragment>
 </navigation>
