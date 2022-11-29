@@ -33,7 +33,8 @@ class LoginFragment : Fragment() {
     }
 
     private fun navigateToWelcomeFragment() {
-        val action = LoginFragmentDirections.actionLoginFragmentToWelcomeFragment("")
+        val action =
+            LoginFragmentDirections.actionLoginFragmentToWelcomeFragment(binding.emailEditText.text.toString())
         findNavController().navigate(action)
     }
 }
