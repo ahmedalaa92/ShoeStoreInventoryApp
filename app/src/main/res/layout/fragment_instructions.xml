@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--        Screen Title-->
         <TextView
             android:id="@+id/instructionsTitleText"
             android:layout_width="wrap_content"
@@ -24,6 +25,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!--        Instructions-->
         <TextView
             android:id="@+id/instructionsDescriptionText"
             android:layout_width="match_parent"

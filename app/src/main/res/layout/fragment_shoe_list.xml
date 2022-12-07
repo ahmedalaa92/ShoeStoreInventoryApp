@@ -9,6 +9,7 @@
             type="com.example.shoestoreinventoryapp.screens.shoelist.ShoeListViewModel" />
     </data>
 
+    <!--  Layout Container to hold the scroll view and the floating button  -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -16,17 +17,15 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
+            <!--Layout that hold the shoes items vertically-->
             <LinearLayout
                 android:id="@+id/shoeListContainerLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical" />
 
-
-            </LinearLayout>
         </ScrollView>
-
+        <!--Button to add new shoe item -->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addItemButton"
             android:layout_width="wrap_content"

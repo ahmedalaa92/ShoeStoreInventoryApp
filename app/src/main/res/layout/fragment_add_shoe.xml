@@ -25,6 +25,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!--  Shoe Model Name -->
         <EditText
             android:id="@+id/shoeNameEditText"
             android:layout_width="match_parent"
@@ -49,6 +50,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/shoeNameEditText" />
 
+        <!--  Manufacturer Company Name  -->
         <EditText
             android:id="@+id/shoeCompanyEditText"
             android:layout_width="match_parent"
@@ -61,6 +63,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/shoeSizeEditText" />
 
+        <!-- Shoe Description Text -->
         <EditText
             android:id="@+id/shoeDescriptionEditText"
             android:layout_width="match_parent"
