@@ -1,5 +1,6 @@
 package com.example.shoestoreinventoryapp.screens.shoelist
 
+import androidx.databinding.InverseMethod
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,21 +12,13 @@ open class ShoeListViewModel : ViewModel() {
     val navigationToAddItem: LiveData<Boolean>
         get() = _navigationToAddItem
 
-    private var _shoeNameText = MutableLiveData<String>()
-    val shoeNameText: LiveData<String>
-        get() = _shoeNameText
+    var shoeNameText = MutableLiveData<String>()
 
-    private var _shoeSizeText = MutableLiveData<String>()
-    val shoeSizeText: LiveData<String>
-        get() = _shoeSizeText
+    var shoeSizeText = MutableLiveData<String>()
 
-    private var _companyNameText = MutableLiveData<String>()
-    val companyNameText: LiveData<String>
-        get() = _companyNameText
+    var companyNameText = MutableLiveData<String>()
 
-    private var _shoeDescriptionText = MutableLiveData<String>()
-    val shoeDescriptionText: LiveData<String>
-        get() = _shoeDescriptionText
+    var shoeDescriptionText = MutableLiveData<String>()
 
     private var _navigationToShoeList = MutableLiveData<Boolean>()
     val navigationToShoeList: LiveData<Boolean>
@@ -48,11 +41,12 @@ open class ShoeListViewModel : ViewModel() {
         _navigationToAddItem.value = true
     }
 
-    fun onSaveButtonClicked(
-        shoeName: String, shoeSize: String, companyName: String, description: String
-    ) {
+    fun onSaveButtonClicked() {
         val shoe = Shoe(
-            shoeName, shoeSize.toDouble(), companyName, description
+            shoeNameText.value.toString(),
+            shoeSizeText.value!!.toDouble(),
+            companyNameText.value.toString(),
+            shoeDescriptionText.value.toString()
         )
         shoeList.value = shoeList.value?.plus(shoe)
         _navigationToShoeList.value = true

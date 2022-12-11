@@ -25,15 +25,6 @@ class AddShoeFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        binding.saveButton.setOnClickListener {
-            viewModel.onSaveButtonClicked(
-                binding.shoeNameEditText.text.toString(),
-                binding.shoeSizeEditText.text.toString(),
-                binding.shoeCompanyEditText.text.toString(),
-                binding.shoeDescriptionEditText.text.toString()
-            )
-        }
-
         viewModel.navigationToShoeList.observe(viewLifecycleOwner) { shouldNavigateToShoeList ->
             if (shouldNavigateToShoeList) {
                 val action = AddShoeFragmentDirections.actionAddShoeFragmentToShoeListFragment()
